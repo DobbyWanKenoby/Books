@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos' display-mode='raw'>
+    <pages>
+        <page name='Playground'/>
+        <page name='Start'/>
+        <page name='1 Otpravnaya tochka'/>
+        <page name='2 Types'/>
+        <page name='Tuple'/>
+        <page name='If'/>
+        <page name='sequence'/>
+        <page name='ranges'/>
+        <page name='Array'/>
+        <page name='Set'/>
+        <page name='Dictionary'/>
+        <page name='String Advanced'/>
+        <page name='asserts'/>
+        <page name='for'/>
+        <page name='while'/>
+        <page name='Switch'/>
+        <page name='guard'/>
+        <page name='Операторы управления - Где использовать'/>
+        <page name='Optionals'/>
+        <page name='Func'/>
+        <page name='Additional func MAP ZIP'/>
+        <page name='Closures'/>
+        <page name='Lazy'/>
+        <page name='Enum'/>
+        <page name='Struct'/>
+        <page name='Class'/>
+        <page name='Class page 2'/>
+        <page name='Propertys'/>
+        <page name='Propertys page 2'/>
+        <page name='Subscript'/>
+        <page name='Nasledovanie'/>
+        <page name='Any'/>
+        <page name='Init'/>
+        <page name='ARC 1'/>
+        <page name='ARC 2'/>
+        <page name='ARC 3'/>
+        <page name='ARC 4'/>
+        <page name='ARC 5'/>
+        <page name='ARC 6'/>
+        <page name='Opt cepochki'/>
+        <page name='Opt cepochki 2'/>
+        <page name='Opt cepochki 3'/>
+        <page name='Opt cepochki 4'/>
+        <page name='Protocols'/>
+        <page name='Protocols page2'/>
+        <page name='Extension'/>
+        <page name='POP'/>
+        <page name='Balls'/>
+        <page name='Generics'/>
+        <page name='Generics page 2'/>
+        <page name='Generics page 3'/>
+        <page name='Generics page 4'/>
+        <page name='Generics page 5'/>
+        <page name='Generics page 6'/>
+        <page name='Generics page 7'/>
+        <page name='Generics page 8'/>
+        <page name='Errors'/>
+        <page name='Errors page 2'/>
+        <page name='Operators'/>
+    </pages>
+</playground>
