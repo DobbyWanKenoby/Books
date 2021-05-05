@@ -4,7 +4,7 @@ protocol GameProtocol {
     // Количество заработанных очков
     var score: Int { get }
     // Загаданное значение
-    var currentSecretValue: Int! { get }
+    var currentSecretValue: Int { get }
     // Проверяет, окончена ли игра
     var isGameEnded: Bool { get }
     // Начинает новую игру и сразу стартует первый раунд
@@ -22,9 +22,9 @@ class Game: GameProtocol {
     private var minSecretValue: Int
     // Максимальное загаданное значение
     private var maxSecretValue: Int
-    var currentSecretValue: Int!
+    var currentSecretValue: Int = 0
     // количество раундов
-    private var lastRound: Int!
+    private var lastRound: Int
     private var currentRound: Int = 1
     var isGameEnded: Bool {
         if currentRound >= lastRound {
@@ -42,7 +42,6 @@ class Game: GameProtocol {
         minSecretValue = startValue
         maxSecretValue = endValue
         lastRound = rounds
-        currentRound = 1
         currentSecretValue = self.getNewSecretValue()
     }
     
@@ -59,7 +58,7 @@ class Game: GameProtocol {
     
     // Загадать и вернуть новое случайное значение
     private func getNewSecretValue() -> Int {
-        return Array(minSecretValue...maxSecretValue).randomElement()!
+        (minSecretValue...maxSecretValue).randomElement()!
     }
     
     // подсчитывает количество очков

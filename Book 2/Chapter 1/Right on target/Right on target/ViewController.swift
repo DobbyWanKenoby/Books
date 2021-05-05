@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             self.round = 1
         } else {
             // получаем значение на слайдере
-            let numSlider = Int(self.slider.value)
+            let numSlider = Int(self.slider.value.rounded())
             print(numSlider)
             // сравниваем значение с загаданным
             // и подсчитываем очки
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
             // генерируем случайное число
             self.number = Int.random(in: 1...50)
       // передаем значение случайного числа в label
-            self.label?.text = String(self.number)
+            self.label.text = String(self.number)
         }
     }
 

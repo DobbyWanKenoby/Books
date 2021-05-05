@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     var contacts: [ContactProtocol] = [] {
         didSet {
-            contacts.sort{ a, b in a.title < b.title }
+            contacts.sort{ $0.title < $1.title }
             // сохранение контактов в хранилище
             storage.save(contacts: contacts)
             print(contacts)

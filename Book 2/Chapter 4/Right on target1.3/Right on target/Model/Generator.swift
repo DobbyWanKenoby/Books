@@ -17,6 +17,6 @@ class NumberGenerator: GeneratorProtocol {
         endRangeValue = endValue
     }
     func getRandomValue() -> Int {
-        Array(startRangeValue...endRangeValue).randomElement()!
+        (startRangeValue...endRangeValue).randomElement()!
     }
 }

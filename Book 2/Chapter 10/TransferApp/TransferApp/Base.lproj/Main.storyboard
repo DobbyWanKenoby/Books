@@ -1,24 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tQS-uS-slY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Сцена А-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="TransferApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oh7-cH-IoQ">
+                                <rect key="frame" x="171.5" y="430" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2M-Em-TQQ">
+                                <rect key="frame" x="30" y="496" width="354" height="36"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Изменить с помощью свойства">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ns-PA-7j4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcb-Y7-Rih">
+                                <rect key="frame" x="30" y="562" width="354" height="36"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Изменить с помощью segue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kgR-VP-Hx1" kind="show" identifier="toEditScreen" id="oP3-9M-S84"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIW-r2-ZKF">
+                                <rect key="frame" x="30" y="628" width="354" height="36"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Изменить с помощью делегата">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBe-lu-6OL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYL-Tr-uEx">
+                                <rect key="frame" x="30" y="694" width="354" height="36"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Изменить с помощью замыкания">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="editDataWithСlosure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qtM-Pi-wWh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.78375828228176392" green="0.65579866574642642" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a2M-Em-TQQ" secondAttribute="trailing" constant="30" id="BVl-82-ryy"/>
+                            <constraint firstItem="a2M-Em-TQQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="C85-5Z-Ec3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rcb-Y7-Rih" secondAttribute="trailing" constant="30" id="D03-pR-QqY"/>
+                            <constraint firstItem="Oh7-cH-IoQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ILx-Ik-WJO"/>
+                            <constraint firstItem="dYL-Tr-uEx" firstAttribute="top" secondItem="OIW-r2-ZKF" secondAttribute="bottom" constant="30" id="QI9-cb-WrV"/>
+                            <constraint firstItem="Oh7-cH-IoQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VLF-fu-6B5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OIW-r2-ZKF" secondAttribute="trailing" constant="30" id="XT0-BP-lUe"/>
+                            <constraint firstItem="rcb-Y7-Rih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Z6g-dX-rip"/>
+                            <constraint firstItem="OIW-r2-ZKF" firstAttribute="top" secondItem="rcb-Y7-Rih" secondAttribute="bottom" constant="30" id="d5j-wD-dzq"/>
+                            <constraint firstItem="rcb-Y7-Rih" firstAttribute="top" secondItem="a2M-Em-TQQ" secondAttribute="bottom" constant="30" id="eVk-tk-qSh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dYL-Tr-uEx" secondAttribute="trailing" constant="30" id="muE-cJ-9OR"/>
+                            <constraint firstItem="dYL-Tr-uEx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oeb-Sl-wZd"/>
+                            <constraint firstItem="a2M-Em-TQQ" firstAttribute="top" secondItem="Oh7-cH-IoQ" secondAttribute="bottom" constant="30" id="xxJ-Ao-Zst"/>
+                            <constraint firstItem="OIW-r2-ZKF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zbM-5b-vzY"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Сцена А" largeTitleDisplayMode="always" id="Soy-7j-Ygm"/>
+                    <connections>
+                        <outlet property="dataLabel" destination="Oh7-cH-IoQ" id="jfp-0X-WSy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="923.1884057971015" y="88.392857142857139"/>
+        </scene>
+        <!--Сцена Б-->
+        <scene sceneID="J8T-sB-ViX">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="kgR-VP-Hx1" customClass="SecondViewController" customModule="TransferApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mrY-Vn-Yf4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9o-nD-HUZ">
+                                <rect key="frame" x="30" y="431" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipq-6C-ppZ">
+                                <rect key="frame" x="30" y="561" width="354" height="36"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Сохранить с помощью unwind">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZhS-0Y-qOG" kind="unwind" identifier="toFirstScreen" unwindAction="unwindToFirstScreen:" id="TuK-zm-nte"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DW1-gN-Opv">
+                                <rect key="frame" x="30" y="627" width="354" height="36"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Сохранить с помощью делегата">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveDataWithDelegate:" destination="kgR-VP-Hx1" eventType="touchUpInside" id="8EE-RO-NP7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwQ-aT-d6U">
+                                <rect key="frame" x="30" y="495" width="354" height="36"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Сохранить с помощью свойства">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveDataWithProperty:" destination="kgR-VP-Hx1" eventType="touchUpInside" id="t5k-qy-X6j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz4-dH-9Ib">
+                                <rect key="frame" x="30" y="693" width="354" height="36"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Сохранить с помощью замыкания">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveDataWithClosure:" destination="kgR-VP-Hx1" eventType="touchUpInside" id="W1k-o4-BgY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zyz-Lw-YT1"/>
+                        <color key="backgroundColor" red="0.65643271661567493" green="1" blue="0.56418927358513793" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zwQ-aT-d6U" firstAttribute="top" secondItem="o9o-nD-HUZ" secondAttribute="bottom" constant="30" id="3E9-Lr-dad"/>
+                            <constraint firstItem="Zyz-Lw-YT1" firstAttribute="trailing" secondItem="Ipq-6C-ppZ" secondAttribute="trailing" constant="30" id="Asb-xY-RGH"/>
+                            <constraint firstItem="DW1-gN-Opv" firstAttribute="leading" secondItem="Zyz-Lw-YT1" secondAttribute="leading" constant="30" id="G2c-zp-Odd"/>
+                            <constraint firstItem="Zyz-Lw-YT1" firstAttribute="trailing" secondItem="zwQ-aT-d6U" secondAttribute="trailing" constant="30" id="KEs-N3-9aq"/>
+                            <constraint firstItem="o9o-nD-HUZ" firstAttribute="centerY" secondItem="mrY-Vn-Yf4" secondAttribute="centerY" id="Qr5-5A-PaN"/>
+                            <constraint firstItem="Zyz-Lw-YT1" firstAttribute="trailing" secondItem="DW1-gN-Opv" secondAttribute="trailing" constant="30" id="X5x-R6-fgr"/>
+                            <constraint firstItem="Zyz-Lw-YT1" firstAttribute="trailing" secondItem="Bz4-dH-9Ib" secondAttribute="trailing" constant="30" id="c5k-MA-thf"/>
+                            <constraint firstItem="Bz4-dH-9Ib" firstAttribute="top" secondItem="DW1-gN-Opv" secondAttribute="bottom" constant="30" id="hzZ-Wz-kfN"/>
+                            <constraint firstItem="Ipq-6C-ppZ" firstAttribute="top" secondItem="zwQ-aT-d6U" secondAttribute="bottom" constant="30" id="kRa-Q1-ZHo"/>
+                            <constraint firstItem="zwQ-aT-d6U" firstAttribute="leading" secondItem="Zyz-Lw-YT1" secondAttribute="leading" constant="30" id="kZ4-wb-TFF"/>
+                            <constraint firstItem="Ipq-6C-ppZ" firstAttribute="leading" secondItem="Zyz-Lw-YT1" secondAttribute="leading" constant="30" id="lRN-fY-0BT"/>
+                            <constraint firstItem="DW1-gN-Opv" firstAttribute="top" secondItem="Ipq-6C-ppZ" secondAttribute="bottom" constant="30" id="mgd-K1-IpL"/>
+                            <constraint firstItem="o9o-nD-HUZ" firstAttribute="centerX" secondItem="mrY-Vn-Yf4" secondAttribute="centerX" id="pNF-ve-Wjw"/>
+                            <constraint firstItem="o9o-nD-HUZ" firstAttribute="leading" secondItem="Zyz-Lw-YT1" secondAttribute="leading" constant="30" id="rLC-f3-Cv2"/>
+                            <constraint firstItem="Zyz-Lw-YT1" firstAttribute="trailing" secondItem="o9o-nD-HUZ" secondAttribute="trailing" constant="30" id="vgN-Sg-fxg"/>
+                            <constraint firstItem="Bz4-dH-9Ib" firstAttribute="leading" secondItem="Zyz-Lw-YT1" secondAttribute="leading" constant="30" id="zVD-Ij-ng4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Сцена Б" id="eGd-FF-My2"/>
+                    <connections>
+                        <outlet property="dataTextField" destination="o9o-nD-HUZ" id="VQz-Kd-72i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DzN-W7-7HP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZhS-0Y-qOG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1828" y="88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OtB-QY-FWp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tQS-uS-slY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tOb-as-Iyj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TMo-n1-1Iy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8x-du-VuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
