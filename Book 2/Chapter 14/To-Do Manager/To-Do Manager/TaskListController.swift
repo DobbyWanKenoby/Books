@@ -234,24 +234,24 @@ class TaskListController: UITableViewController {
     }
     
     // ручная сортировка списка задач    
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         // секция, из которой происходит перемещение
-        let taskTypeFrom = sectionsTypesPosition[fromIndexPath.section]
+        let taskTypeFrom = sectionsTypesPosition[sourceIndexPath.section]
         // секция, в которую происходит перемещение
-        let taskTypeTo = sectionsTypesPosition[to.section]
+        let taskTypeTo = sectionsTypesPosition[destinationIndexPath.section]
         
         // безопасно извлекаем задачу, тем самым копируем ее
-        guard let movedTask = tasks[taskTypeFrom]?[fromIndexPath.row] else {
+        guard let movedTask = tasks[taskTypeFrom]?[sourceIndexPath.row] else {
             return
         }
 
         // удаляем задачу с места, от куда она перенесена
-        tasks[taskTypeFrom]!.remove(at: fromIndexPath.row)
+        tasks[taskTypeFrom]!.remove(at: sourceIndexPath.row)
         // вставляем задачу на новую позицию
-        tasks[taskTypeTo]!.insert(movedTask, at: to.row)
+        tasks[taskTypeTo]!.insert(movedTask, at: destinationIndexPath.row)
         // если секция изменилась, изменяем тип задачи в соответствии с новой позицией
         if taskTypeFrom != taskTypeTo {
-            tasks[taskTypeTo]![to.row].type = taskTypeTo
+            tasks[taskTypeTo]![destinationIndexPath.row].type = taskTypeTo
         }
         
         // обновляем данные
